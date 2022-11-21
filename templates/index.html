@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="{{url_for('static', filename='css/style.css')}}">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LOGING</title>
+</head>
+<body>
+    <div class="contenedor_login">
+        <form action="/login" method="POST">
+            <img class="logo" src="{{url_for('static', filename='img/logo_b.png')}}" alt="">
+            <label class="input_la" id="usr" class="usr" for="username">Username</label>
+            <input autofocus onkeyup="evaluaruser(this.value)" type="text" name="username" id="username" class="input" placeholder="">
+            <label class="input_la" id="pss" for="password">Password</label>
+            <input onkeyup="evaluarpassword(this.value)" type="password" name="password" id="password" class="input" placeholder="">
+            <br><br>
+            <input type="checkbox" name="remember" class="remember" id="remember">
+            <label class="remember_la" for="remember">Remember</label>
+            <br>
+            <button type="submit" name="submit" class="submit">Sing in</button>
+            <button type="submit" name="singup" class="singup">Sing up</button>
+        </form>
+    </div>
+    <div class="contenedor_sombra_1">
+    </div>
+    <div class="contenedor_sombra_2">
+    </div>
+    <script>
+        function evaluaruser(valor) {
+            if (valor != ''){
+                document.getElementById('usr').style.transform = "translateY(0px)";
+            }else{
+                document.getElementById('usr').style.transform = "translateY(35px)";
+            }
+        }
+
+        function evaluarpassword(valor) {
+            if (valor != ''){
+                document.getElementById('pss').style.transform = "translateY(0px)";
+            }else{
+                document.getElementById('pss').style.transform = "translateY(35px)";
+            }
+        }
+    </script>
+</body>
+</html>

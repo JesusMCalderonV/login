@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" href="{{url_for('static', filename='css/style.css')}}">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>SINGUP</title>
+</head>
+<body>
+	<div class="contenedor_login">
+        <label class="input_la" id="usr" class="usr" for="username">Username</label>
+        <input onkeyup="evaluaruser(this.value)" type="text" name="username" id="username" class="input" placeholder="">
+        <label class="input_la" id="nam" class="nam" for="name">Name</label>
+        <input onkeyup="evaluarname(this.value)" type="text" name="name" id="name" class="input" placeholder="">
+        <label class="input_la" id="pss" for="password">Password</label>
+        <input onkeyup="evaluarpassword(this.value)" type="password" name="password" id="password" class="input" placeholder="">
+        <br>
+        <br>
+        <button class="singup2">Sing up</button>
+    </div>
+    <div class="contenedor_sombra_1">
+    </div>
+    <div class="contenedor_sombra_2">
+    </div>
+    <script>
+    	function evaluaruser(valor) {
+            if (valor != ''){
+                document.getElementById('usr').style.transform = "translateY(0px)";
+            }else{
+                document.getElementById('usr').style.transform = "translateY(35px)";
+            }
+        }
+
+        function evaluarname(valor) {
+            if (valor != ''){
+                document.getElementById('nam').style.transform = "translateY(0px)";
+            }else{
+                document.getElementById('nam').style.transform = "translateY(35px)";
+            }
+        }
+
+        function evaluarpassword(valor) {
+            if (valor != ''){
+                document.getElementById('pss').style.transform = "translateY(0px)";
+            }else{
+                document.getElementById('pss').style.transform = "translateY(35px)";
+            }
+        }
+    </script>
+</body>
+</html>
